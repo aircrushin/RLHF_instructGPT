@@ -11,7 +11,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 ## Download local datafile
-国内huggingface连接有问题，需要将dataset和model下载到本地
 ```bash
 cd RLHF_instructGPT/
 sudo apt-get install git-lfs
@@ -56,17 +55,8 @@ git lfs pull --include="*.bin"
 ```
 
 ## Run
-**1.单机单卡：**
 ```bash
-bash train.sh sgl_gpu
-```
-**2.单机多卡：**
-```bash
-bash train.sh sgl_mach
-```
-**3.多机多卡**
-```bash
-# 首次运行
+# initial running
 bash applications/scripts/mul_mach/apt-install.sh
 ```
 ```bash
